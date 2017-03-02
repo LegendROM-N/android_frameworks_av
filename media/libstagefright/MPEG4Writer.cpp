@@ -301,6 +301,7 @@ private:
 
     int64_t mMinCttsOffsetTimeUs;
     int64_t mMaxCttsOffsetTimeUs;
+    int64_t mCttsOffsetTimeUs;
 
     // Sequence parameter set or picture parameter set
     struct AVCParamSet {
