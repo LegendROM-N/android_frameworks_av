@@ -433,10 +433,11 @@ status_t MetaData::writeToParcel(Parcel &parcel) {
             }
         }
     }
-    return OK;
+    return status;
 }
 
 status_t MetaData::updateFromParcel(const Parcel &parcel) {
+    status_t status = OK;
     uint32_t numItems;
     if (parcel.readUint32(&numItems) == OK) {
 
@@ -466,7 +467,7 @@ status_t MetaData::updateFromParcel(const Parcel &parcel) {
             }
          }
 
-        return OK;
+        return status;
     }
     ALOGW("no metadata in parcel");
     return UNKNOWN_ERROR;
